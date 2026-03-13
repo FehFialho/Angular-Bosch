@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
   title = 'FirstApp';
+  count = 0;
+  userName = "Escreva sua Frase";
+
+  foiClickado = () => {
+    this.count++;
+  }
+
+  atualizaUser = (event: string) => {
+    console.log("Atualizando Usuário");
+    this.userName = event;
+  }
 }
