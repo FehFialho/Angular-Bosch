@@ -1,0 +1,14 @@
+.card {
+  width: 200px;
+  min-height: 200px;
+  height: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  font-family: Arial;
+  margin: 2rem;
+}
+
+.card img {
+  width: 100%;
+}

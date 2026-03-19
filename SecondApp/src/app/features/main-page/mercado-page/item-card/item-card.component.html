@@ -1,0 +1,10 @@
+<div class="card"  *ngFor="let item of mockItem; track: $index">
+
+  <img src="{{item.imageUrl}}" alt="">
+  <h3>{{item.name}}</h3>
+  <p>{{item.description}}</p><br>
+
+  <span>R$ {{item.price}}</span><br><br>
+  <small>Estoque: {{item.stock}}</small>
+
+</div>
