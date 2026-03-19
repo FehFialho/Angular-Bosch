@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import MockMercadoItem, { IMercadoItem } from '../itens-mock';
+
 
 @Component({
   selector: 'app-item-card',
@@ -7,9 +8,9 @@ import MockMercadoItem, { IMercadoItem } from '../itens-mock';
   styleUrls: ['./item-card.component.css']
 })
 export class ItemCardComponent {
-  protected mockItem: IMercadoItem[] = []
-
-  constructor () {
-    this.mockItem = MockMercadoItem;
-  }
+  @Input()
+  item!: IMercadoItem
+  
+  defaultImage: string = 'https://www2.camara.leg.br/atividade-legislativa/comissoes/comissoes-permanentes/cindra/imagens/sem.jpg.gif/image';
 }
+//anna
