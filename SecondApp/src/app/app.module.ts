@@ -11,6 +11,7 @@ import { HeaderComponent } from './shared/header/header.component';
 import { MercadoPageComponent } from './features/main-page/mercado-page/mercado-page.component';
 import { ComidaPageComponent } from './features/main-page/comida-page/comida-page.component';
 import { ItemCardComponent } from './features/main-page/mercado-page/item-card/item-card.component';
+import { ComidaCardComponent } from './features/main-page/comida-page/comida-card/comida-card.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ItemCardComponent } from './features/main-page/mercado-page/item-card/i
     HeaderComponent,
     MercadoPageComponent,
     ComidaPageComponent,
-    ItemCardComponent
+    ItemCardComponent,
+    ComidaCardComponent
   ],
   imports: [
     BrowserModule,

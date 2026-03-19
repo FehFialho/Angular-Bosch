@@ -1,8 +1,9 @@
-<p>comida-page works!</p>
-<!-- {{pessoas[1].name}} -->
-
-<div class="pessoas">
-    <div class="pessoa" *ngFor="let person of pessoas; track: $index">
-        {{person.name}}
-    </div>
+<div class="comidas">
+    <!-- <div class="comida-item" *ngFor="let comida of comidas; track: $index">
+        {{comida.name}}
+    </div> -->
+    <app-comida-card 
+        *ngFor="let comida of comidas; track: $index"
+        [comida]="comida">
+    </app-comida-card>
 </div>
