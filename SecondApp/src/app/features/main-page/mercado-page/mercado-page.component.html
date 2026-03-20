@@ -1,6 +1,14 @@
 <div class="itens" >
     <app-item-card 
         *ngFor="let item of mockItem; track: $index"
+        (click) = "openModal(item)"
         [item]="item">
     </app-item-card>
+    
+    <app-item-modal 
+        [item]="clickedItem"
+        *ngIf="isClicked"
+        (Exit) = "closeModal()">
+    </app-item-modal>
+    
 </div>

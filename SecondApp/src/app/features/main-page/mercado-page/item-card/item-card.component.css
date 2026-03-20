@@ -12,9 +12,9 @@
   justify-content: space-between; 
 }
 
-.card:hover {
+/* .card:hover {
   transform: scaleX(0.1);
-}
+} */
 
 .card img {
   width: 100%;
