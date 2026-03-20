@@ -13,6 +13,8 @@ import { ComidaPageComponent } from './features/main-page/comida-page/comida-pag
 import { ItemCardComponent } from './features/main-page/mercado-page/item-card/item-card.component';
 import { ComidaCardComponent } from './features/main-page/comida-page/comida-card/comida-card.component';
 import { ItemModalComponent } from './features/main-page/mercado-page/item-modal/item-modal.component';
+import { CreateAccountComponent } from './features/login-page/create-account/create-account.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,11 +28,13 @@ import { ItemModalComponent } from './features/main-page/mercado-page/item-modal
     ComidaPageComponent,
     ItemCardComponent,
     ComidaCardComponent,
-    ItemModalComponent
+    ItemModalComponent,
+    CreateAccountComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text);
+}
+
+/* Centralizar tudo */
+.login-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card */
+.login-container {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+/* Título */
+.title {
+  margin-bottom: 1.5rem;
+  color: brown;
+  font-size: 25rem;
+}
+
+/* Links */
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+/* Botões */
+.links a {
+  text-decoration: none;
+  text-align: center;
+  padding: 0.7rem;
+  border-radius: 6px;
+  background-color: brown;
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: large;
+  transition: 0.2s;
+}
+
+/* Hover */
+.links a:hover {
+  background-color: rgb(199, 58, 58);
+}

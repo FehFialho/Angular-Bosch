@@ -5,6 +5,7 @@ import { LoginPageComponent } from './features/login-page/login-page.component';
 import { NotFoundPageComponent } from './features/not-found-page/not-found-page.component';
 import { MercadoPageComponent } from './features/main-page/mercado-page/mercado-page.component';
 import { ComidaPageComponent } from './features/main-page/comida-page/comida-page.component';
+import { CreateAccountComponent } from './features/login-page/create-account/create-account.component';
 
 const routes: Routes = [
   {path: "", component:MainPageComponent, children: [
@@ -12,6 +13,7 @@ const routes: Routes = [
     {path: "comida", component:ComidaPageComponent}
   ]},
   {path: "login", component:LoginPageComponent},
+  {path: "create-account", component:CreateAccountComponent},
   {path: "**", component:NotFoundPageComponent}
 ];
 

@@ -1,54 +1,111 @@
-.modal-bg{
-    position: absolute;
+.modal-bg {
+    position: fixed;
+    inset: 0;
     width: 100vw;
     height: 100vh;
-    top: 0; left: 0;
-    /* background-color: rgba(137, 43, 226, 0.575); */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(6px);
 }
 
 .modal-container {
-    position: fixed;
-    width: 30vw;
+    width: 90%;
+    max-width: 40vw;
     height: 50vh;
-    top: 0;left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    background-color: rgb(238, 238, 238);
+
+    background-color: #ffffff;
     padding: 2rem;
-    box-shadow: 0 10 black;
+    border-radius: 16px;
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
 
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between; /* ESSENCIAL */
     align-items: center;
+
+    animation: fadeIn 0.2s ease;
 }
 
+/* topo */
 .modal-top {
+    width: 100%;
     display: flex;
-    width: 90%;
     justify-content: flex-end;
-    align-items: end;
 }
 
-.modal-bottom {
-    display: flex;
+/* conteúdo central (opcional, mas ajuda muito no controle) */
+.item-modal-img{
     width: 70%;
-    justify-content: space-around;
-    gap: 2rem;
+    height: 40%;
+    margin: 1rem;
 }
 
+.modal-container h2,
+.modal-container p {
+    text-align: center;
+}
+
+/* botões no fundo */
+.modal-bottom {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around; /* como você pediu */
+    gap: 1rem;
+}
+
+/* botão fechar */
 .modal-exit-btn {
-    background-color: brown;
-    color: white;
-    width: 2rem;
-    height: 2rem;
+    background-color: transparent;
+    color: #666;
+    border: none;
+
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
 
+.modal-exit-btn:hover {
+    background-color: #f2f2f2;
+    color: #000;
+}
+
+/* botões padrão */
 .modal-default-btn {
-    background-color: rgb(63, 63, 63);
-    color: white;
-    padding: .5rem;
-    width: 50%;
+    flex: 1;
+
+    background-color: #111;
+    color: #fff;
+
+    padding: 0.8rem;
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.modal-default-btn:hover {
+    background-color: #333;
+    transform: translateY(-2px);
+}
+
+/* animação */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
