@@ -15,6 +15,8 @@ import { ComidaCardComponent } from './features/main-page/comida-page/comida-car
 import { ItemModalComponent } from './features/main-page/mercado-page/item-modal/item-modal.component';
 import { CreateAccountComponent } from './features/login-page/create-account/create-account.component';
 import { FormsModule } from '@angular/forms';
+import { ModalComponent } from './shared/modal/modal.component';
+import { CardComponent } from './shared/card/card.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { FormsModule } from '@angular/forms';
     ItemCardComponent,
     ComidaCardComponent,
     ItemModalComponent,
-    CreateAccountComponent
+    CreateAccountComponent,
+    ModalComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,

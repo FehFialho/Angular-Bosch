@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import MockPessoas, { IPessoa } from './pessoas-mock';
 import MockItemComidas, { IComidaItem } from './comidas-mock';
 
 @Component({
@@ -8,9 +7,19 @@ import MockItemComidas, { IComidaItem } from './comidas-mock';
   styleUrls: ['./comida-page.component.css']
 })
 export class ComidaPageComponent {
+  
   protected comidas: IComidaItem[] = []
+  protected focusedFood?: IComidaItem; 
 
   constructor () {
     this.comidas = MockItemComidas;
+  }
+
+  onCardClick = (item: IComidaItem) => {
+    this.focusedFood = item
+  }
+
+  save = () => {
+    alert('Pedido efetuado com sucesso!')
   }
 }

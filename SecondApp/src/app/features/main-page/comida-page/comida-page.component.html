@@ -4,6 +4,19 @@
     </div> -->
     <app-comida-card 
         *ngFor="let comida of comidas; track: $index"
-        [comida]="comida">
+        [comida]="comida"
+        (click)="onCardClick(comida)">
     </app-comida-card>
 </div>
+
+<app-modal 
+    *ngIf="focusedFood"
+    (onClose)="focusedFood = undefined"
+    [Confirmation]="true"
+    [Title]="'Efetuar Pedido'"
+    SaveLabel="Finalizar"
+    (onSave)="save()"
+>
+    <h2>{{focusedFood.name}}</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+</app-modal>
